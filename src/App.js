@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ListBox from "./components/components.js";
+import Controls from "./components/components.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>To-Do List</h1>
       </header>
-    </div>
+
+      <section id="content">
+        <div id="headings">
+          <h2 id="h2-priority">Priority</h2>
+          <h2 id="h2-secondary">Secondary</h2>
+        </div>
+
+        <section id="boxes-container">
+          <section id="priority-box">
+            <ListBox id="priority-listbox">
+              <Controls />
+            </ListBox>
+          </section>
+          <ListBox id="secondary-listbox" />
+        </section>
+      </section>
+    </>
   );
 }
 

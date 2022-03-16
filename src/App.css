@@ -1,38 +1,95 @@
-.App {
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: rgb(235, 235, 235);
+}
+
+header {
+  margin-top: 5%;
   text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#headings {
+  margin-top: 5pc;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2pc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#boxes-container {
+  margin-top: 2pc;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#priority-box {
+  border: solid;
+  border-radius: 5px;
+}
+
+#priority-listbox,
+#secondary-listbox {
+  padding: 10px;
+  border: solid;
+  border-radius: 5px;
+  width: 30%;
+}
+
+#priority-listbox {
+  background-color: rgb(255, 244, 142);
+}
+
+#secondary-listbox {
+  background-color: rgb(255, 254, 200);
+}
+
+.tasks {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin: 10px;
+  border: solid;
+  border-radius: 5px;
+  border-width: 2px;
+  font-size: 2pc;
 }
 
-.App-link {
-  color: #61dafb;
+.tasks p {
+  margin: 10px;
+  background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: gold;
+  transition: 0.2s ease-in-out;
+  font-size: 20px;
+}
+
+input:focus {
+  outline: none;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+button {
+  background-color: gold;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
 }
