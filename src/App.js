@@ -1,8 +1,8 @@
 import "./App.css";
-import ListBox from "./components/components.js";
-import Controls from "./components/components.js";
+import ListBox from "./components/ListBox.js";
+import Controls from "./components/Controls";
 
-function App() {
+const App = () => {
   return (
     <>
       <header>
@@ -17,15 +17,14 @@ function App() {
 
         <section id="boxes-container">
           <section id="priority-box">
-            <ListBox id="priority-listbox">
-              <Controls />
-            </ListBox>
+            <ListBox priority={true} id="priority-listbox" />
+            <Controls inp-id="task-inp" />
           </section>
           <ListBox id="secondary-listbox" />
         </section>
       </section>
     </>
   );
-}
+};
 
 export default App;
